@@ -10,7 +10,7 @@ public class VideojuegoFisico extends Videojuego {
     }
 
     public boolean comprobarCompatibilidad(){
-
+    return true;
     }
 
 }

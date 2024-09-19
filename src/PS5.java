@@ -1,4 +1,4 @@
-public class PS5 {
+public class PS5 extends consola {
 
     boolean estado;
 
@@ -7,5 +7,8 @@ public class PS5 {
 
     }
 
+    public String obtenerPlataforma(){
+        return "PS5";
+    }
 
 }
