@@ -5,19 +5,17 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-    VideojuegoFisico Videojuego1 = new VideojuegoFisico();
-    VideojuegoDigital Videojuego2 = new VideojuegoDigital();
+    VideojuegoFisico videojuego1 = new VideojuegoFisico();
+    VideojuegoFisico videojuego2 = new VideojuegoFisico();
+    videojuego2.tipo = Videojuego.TiposConsolas.xbox;
+    VideojuegoFisico videojuego3 = new VideojuegoFisico();
+    videojuego3.tipo = Videojuego.TiposConsolas.PS5;
 
-        System.out.println(Videojuego1.genero);
-        System.out.println(Videojuego1.tipo);
+    Switch switch1 = new Switch();
+    switch1.instalarJuego(videojuego1);
+    switch1.instalarJuego(videojuego2);
+    switch1.instalarJuego(videojuego3);
 
-        System.out.println(Videojuego1.calcularPrecioFinal());
-
-        System.out.println(Videojuego2.genero);
-        System.out.println(Videojuego2.tipo);
-
-        System.out.println(Videojuego2.calcularPrecioFinal());
-
-
+    System.out.println(switch1.videojuegos);
     }
 }

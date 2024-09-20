@@ -1,5 +1,7 @@
 public abstract class consola implements Iconsola{
 
+    public enum Plataforma{PS5,Switch,xbox}
+
     public consola(){
     }
 
@@ -14,8 +16,7 @@ public abstract class consola implements Iconsola{
     }
 
     public void jugarJuego() {
-
     }
 
-    public abstract String obtenerPlataforma();
+    public abstract Plataforma obtenerPlataforma();
 }

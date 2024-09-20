@@ -4,7 +4,7 @@ public class xbox extends consola {
 
     }
 
-    public String obtenerPlataforma(){
-        return "xbox";
+    public Plataforma obtenerPlataforma(){
+        return Plataforma.xbox;
     }
 }

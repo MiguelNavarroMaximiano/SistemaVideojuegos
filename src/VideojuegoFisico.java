@@ -9,8 +9,7 @@ public class VideojuegoFisico extends Videojuego {
         return precio + precioEnvio;
     }
 
-    public boolean comprobarCompatibilidad(){
-    return true;
+    public boolean comprobarCompatibilidad() {
     }
 
-}
+    }

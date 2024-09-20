@@ -3,5 +3,5 @@ public interface Iconsola {
     void apagar();
     void instalarJuego(Videojuego juego);
     void jugarJuego();
-    String obtenerPlataforma();
+    consola.Plataforma obtenerPlataforma();
 }

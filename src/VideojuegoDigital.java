@@ -11,6 +11,6 @@ public class VideojuegoDigital extends Videojuego {
     }
 
     public boolean comprobarCompatibilidad(){
-    return true;
+
     }
 }

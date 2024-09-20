@@ -4,7 +4,7 @@ public class Switch extends consola {
 
     }
 
-    public String obtenerPlataforma(){
-        return "Switch";
+    public Plataforma obtenerPlataforma(){
+        return Plataforma.Switch;
     }
 }
