@@ -17,6 +17,6 @@ public abstract class Videojuego implements IVideojuego {
     }
 
     public abstract double calcularPrecioFinal();
-    public abstract boolean comprobarCompatibilidad();
+    public abstract boolean comprobarCompatibilidad(consola.Plataforma plataforma);
 
 }

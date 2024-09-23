@@ -1,5 +1,5 @@
 public interface IVideojuego {
 
     double calcularPrecioFinal();
-    boolean comprobarCompatibilidad();
+    boolean comprobarCompatibilidad(consola.Plataforma plataforma);
 }

@@ -9,7 +9,15 @@ public class VideojuegoFisico extends Videojuego {
         return precio + precioEnvio;
     }
 
-    public boolean comprobarCompatibilidad() {
+    public boolean comprobarCompatibilidad(consola.Plataforma plataforma) {
+       String p = plataforma.toString();
+       String t = tipo.toString();
+       boolean isCompatible = false;
+
+       if (t.equals(p)){
+            isCompatible = true;
+       }
+        return isCompatible;
     }
 
     }

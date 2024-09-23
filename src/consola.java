@@ -3,6 +3,7 @@ public abstract class consola implements Iconsola{
     public enum Plataforma{PS5,Switch,xbox}
 
     public consola(){
+
     }
 
     public void encender(){
@@ -11,8 +12,7 @@ public abstract class consola implements Iconsola{
     public void apagar(){
     }
 
-    public void instalarJuego(Videojuego juego) {
-
+    public void instalarJuego(Videojuego juego) throws JuegoNoCompatibleException{
     }
 
     public void jugarJuego() {
