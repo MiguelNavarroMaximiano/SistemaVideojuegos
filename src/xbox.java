@@ -14,6 +14,10 @@ public class xbox extends consola {
         return Plataforma.xbox;
     }
 
+    public void jugarJuego() {
+        System.out.println(videojuegos.getFirst());
+    }
+
     public void instalarJuego(Videojuego juego) throws JuegoNoCompatibleException {
         if (juego.comprobarCompatibilidad(plataforma)){
             videojuegos.add(juego);

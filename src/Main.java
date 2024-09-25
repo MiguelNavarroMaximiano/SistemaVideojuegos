@@ -7,7 +7,7 @@ public class Main {
 
     VideojuegoFisico videojuego1 = new VideojuegoFisico();
     VideojuegoFisico videojuego2 = new VideojuegoFisico();
-    videojuego2.tipo = Videojuego.TiposConsolas.xbox;
+    videojuego2.tipo = Videojuego.TiposConsolas.PS5;
     VideojuegoFisico videojuego3 = new VideojuegoFisico();
     videojuego3.tipo = Videojuego.TiposConsolas.PS5;
     VideojuegoDigital videojuego4 = new VideojuegoDigital();
@@ -18,20 +18,24 @@ public class Main {
     switch1.instalarJuego(videojuego1);
     switch1.instalarJuego(videojuego4);
 
-    System.out.println(switch1.videojuegos);
+
 
     xbox xbox1 = new xbox();
-    xbox1.instalarJuego(videojuego2);
+    //xbox1.instalarJuego(videojuego2);
 
-    System.out.println(xbox1.videojuegos);
+
 
     PS5 ps5 = new PS5();
+    ps5.encender();
     ps5.instalarJuego(videojuego3);
+    ps5.instalarJuego(videojuego2);
+    ps5.apagar();
+    System.out.println("-----------------");
+    ps5.encender();
 
 
-    System.out.println(ps5.videojuegos);
 
-    ps5.jugarJuego();
+    //ps5.jugarJuego();
 
     }
 }
