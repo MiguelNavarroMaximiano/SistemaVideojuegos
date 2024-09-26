@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+
 public class VideojuegoDigital extends Videojuego {
     double descuento = 0.80;
 
 
     public VideojuegoDigital() {
         super();
+        formato = "digital";
     }
 
     public double calcularPrecioFinal() {
@@ -19,5 +22,8 @@ public class VideojuegoDigital extends Videojuego {
             isCompatible = true;
         }
         return isCompatible;
+    }
+    public boolean comprobarExistencia(ArrayList<Videojuego> videojuegos) {
+        return true;
     }
 }

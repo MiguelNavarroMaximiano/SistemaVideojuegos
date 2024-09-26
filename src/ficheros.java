@@ -8,7 +8,7 @@ public class ficheros {
     public ficheros() {
     }
 
-    public static void leerFichero(String path) {
+    public static void leerFichero(String path, ArrayList<Videojuego> juegos) {
 
         File fichero = new File(path);
 
@@ -21,6 +21,20 @@ public class ficheros {
             while (sc.hasNextLine()) {
                 String juego = sc.nextLine();
                 System.out.println(juego);
+                String [] sep = juego.split(",");
+                String nombre = sep[0];
+                Videojuego.TiposConsolas tipo = Videojuego.TiposConsolas.valueOf(sep[1]);
+                Videojuego.Generos genero = Videojuego.Generos.valueOf(sep[2]);
+                double precio = Double.parseDouble(sep[3]);
+                String formato = sep[4];
+
+                Videojuego videojuego = new VideojuegoFisico();
+                videojuego.nombre = nombre;
+                videojuego.tipo = tipo;
+                videojuego.genero = genero;
+                videojuego.precio = precio;
+                videojuego.formato = formato;
+                juegos.add(videojuego);
             }
 
 
@@ -37,8 +51,10 @@ public class ficheros {
             }
         }
 
-
     }
+
+
+
 
     public static void escribirFichero(ArrayList<Videojuego> juegos, String path) {
 
@@ -50,6 +66,10 @@ public class ficheros {
             fw.write(videojuego.tipo.toString());
             fw.write(",");
             fw.write(videojuego.genero.toString());
+            fw.write(",");
+            fw.write(String.valueOf(videojuego.precio));
+            fw.write(",");
+            fw.write(videojuego.formato);
             fw.write("\n");
         }
         fw.close();

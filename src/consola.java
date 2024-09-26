@@ -12,7 +12,7 @@ public abstract class consola implements Iconsola{
     public void apagar(){
     }
 
-    public void instalarJuego(Videojuego juego) throws JuegoNoCompatibleException{
+    public void instalarJuego(Videojuego juego) throws consolaException.JuegoNoCompatibleException, consolaException.juegoYaExistenteException{
     }
 
     public void jugarJuego() {

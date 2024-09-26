@@ -1,8 +1,12 @@
+import java.util.ArrayList;
+
 public class VideojuegoFisico extends Videojuego {
     double precioEnvio = 1.99;
 
     public VideojuegoFisico() {
         super();
+        precio = calcularPrecioFinal();
+        formato = "fisico";
     }
 
     public double calcularPrecioFinal() {
@@ -18,6 +22,10 @@ public class VideojuegoFisico extends Videojuego {
             isCompatible = true;
        }
         return isCompatible;
+    }
+
+    public boolean comprobarExistencia(ArrayList<Videojuego> videojuegos) {
+
     }
 
     }

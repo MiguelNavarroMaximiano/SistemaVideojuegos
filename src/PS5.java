@@ -15,7 +15,7 @@ public class PS5 extends consola {
 
     public void encender(){
         estado = true;
-        ficheros.leerFichero(listaJuegosPath);
+        ficheros.leerFichero(listaJuegosPath, videojuegos);
 
     }
 
@@ -33,11 +33,11 @@ public class PS5 extends consola {
      System.out.println(videojuegos.getFirst());
     }
 
-    public void instalarJuego(Videojuego juego) throws JuegoNoCompatibleException {
-        if (juego.comprobarCompatibilidad(plataforma)) {
+    public void instalarJuego(Videojuego juego) throws consolaException.JuegoNoCompatibleException, consolaException.juegoYaExistenteException {
+        if (juego.comprobarCompatibilidad(plataforma) && juego.comprobarExistencia(videojuegos)) {
             videojuegos.add(juego);
         } else {
-            throw new JuegoNoCompatibleException();
+            throw new consolaException.JuegoNoCompatibleException();
         }
     }
 
